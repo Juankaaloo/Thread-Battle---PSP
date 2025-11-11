@@ -15,15 +15,14 @@ public class NaveEstelar implements Runnable {
         while (tiradaLocal < LIMITE_TIRADAS) {
             tiradaLocal++;
 
-            int avance = (int) (Math.random() * 10 + 1); // de 1 a 10 metros
+            int avance = (int) (Math.random() * 10 + 1);
             distancia += avance;
 
-            // Salida EXACTA como la querías
             System.out.println("Nave " + nombreCivilizacion +
                     ": Tirada " + tiradaLocal + " - He avanzado " + distancia + " metros!");
 
             try {
-                Thread.sleep(50); // pausa simulada
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
